@@ -13,14 +13,6 @@ var superheroes = [{
 }];
 
 
-
-function listHeadings() {
-    var table = (Object.keys(superheroes[0]));
-  for(var prop in table) {
-    document.getElementById("output").innerHTML += "<p>" + table[prop] + "</p>";
-  }
-}
-
 function toggle() {
 	var el = document.getElementById("output");
 	if ( el.style.display != 'none' ) {
@@ -53,4 +45,14 @@ for (var i = 0; i < superheroes.length; i += 1) {
   document.getElementById("TableColumnOne").innerHTML = HeroesTable1;
   document.getElementById("TableColumnTwo").innerHTML = HeroesTable2;
   document.getElementById("TableColumnThree").innerHTML = HeroesTable3;
+
+function list() {
+ 
+var letter = ""
+for (var i = 0; i < 3; i += 1) {
+  letter += "<p>";
+  letter += superheroes[i].Name;
+  letter += '</p>';
+}  
+  document.getElementById("div").innerHTML = letter
 }
